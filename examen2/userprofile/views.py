@@ -15,7 +15,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
-
 @method_decorator(permission_required('app.list_app'))
 def listar(request):
     porhacer = Todo.objects.all()
@@ -57,6 +56,8 @@ class TodoDelete(DeleteView):
     def get_success_url(self):
         # To do this because the success_url class variable isn't reversed...
         return reverse('app_list')
+
+
 
 #################################################
 def ingresar(request):

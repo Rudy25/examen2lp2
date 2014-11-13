@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Todo(models.Model):
     PRIORITY_LIST = (
         (0, 'DNI'),
@@ -28,3 +29,6 @@ class Todo(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('app_detail', [int(self.pk)])
+
+
+

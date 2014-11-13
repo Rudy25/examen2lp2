@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^Todo(?P<pk>\d+)/Delete$', TodoDelete.as_view(), name='app_delete'),
     url(r'^listar/todo$', 'userprofile.views.listar'),
     url(r'^admin/', include(admin.site.urls)),
+
+    
     #url(r'^$', TodoList.as_view(), name='app_list'),
     #url(r'^Todo(?P<pk>\d+)$', TodoDetail.as_view(), name='app_detail'),
     #url(r'^New$', TodoCreate.as_view(), name='app_create'),

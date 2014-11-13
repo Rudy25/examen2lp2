@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<html>
+<head>
+  <title>{% block title %}Untitled{% endblock %} | Todo list with permissions</title>
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css>               
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">   
+  <script src="media/js/jquery.js"></script>                                     
+  <script src="media/bootstrap/js/jquery.js"></script>
+</head>
+<body>
+<h1>EXAMEN LP2 Registro Usuarios</h1>
+<li><a href="{% url 'app_list' %}">REGISTRO</a></li>
+{% if perms.userprofile.add_app %}
+<li><a href="{% url 'app_create' %}">AGREGAR</a></li>
+{% endif %}
+<hr/>
+{% block content %}
+The end user should never ever see this!
+{% endblock %}
+</body>
+</html>
